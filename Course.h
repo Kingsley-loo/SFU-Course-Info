@@ -20,7 +20,7 @@ class Course {
         string Title; //name of Course given by SFU (ex. CMPT 310's title would be "Intro to Artifical Intelligence")
         string Info; //Description of what will be taught in the course, provided by SFU or the instructor
         
-        vector<Course> preReq; //vector array of prerequisites for the course
+        vector<Course *> preReq; //vector array of prerequisites for the course
 
     public:
 
@@ -34,7 +34,7 @@ class Course {
     Course(string newSubject, const unsigned int newNumber, string newTitle, string newInfo);
 
     //Paramerized Constructor with preReq vector
-
+    Course(string newSubject, const unsigned int newNumber, string newTitle, string newInfo, vector<Course *> newPreReq);
 
     //Description: returns Subject of Course 
     string getSubject() const;
@@ -52,7 +52,7 @@ class Course {
 
 
     //Description:  returns vector of prerequisites for the Course 
-    vector<Course> getPreReq() const;
+    vector<Course *> getPreReq() const;
 
     //Description: prints out all of the Course's details (Subject, Number, Title, 
     //              Info, preReq) in a tidy manner

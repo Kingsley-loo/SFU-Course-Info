@@ -15,7 +15,6 @@ Author: Kingsley Loo-Xu
 #include <vector>
 #include "Course.h"
 
-using std::vector;
 
 class User {
 

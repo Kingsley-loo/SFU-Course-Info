@@ -29,6 +29,11 @@ using std::vector;
     }
 
     //Paramerized Constructor with preReq vector
+    Course(string newSubject, const unsigned int newNumber, string newTitle, string newInfo, 
+        vector<Course *> newPreReq) : Subject(newSubject), Number(newNumber), Title(newTitle), 
+        Info(newInfo), preReq(newPreReq) {
+        
+    }
 
 
     //Description: returns Subject of Course 
