@@ -12,7 +12,10 @@ Author: Kingsley Loo-Xu
 
 
 #include <string>
+#include <vector>
 #include "Course.h"
+
+using std::vector;
 
 class User {
 
@@ -21,9 +24,11 @@ class User {
     constexpr static unsigned int MAX_LEVEL = 4;
     constexpr static unsigned int MAX_COURSES = 10;
 
-    //will be an array of user arrays, ex: users[0] will have array of 100 level courses 
-    User * users[MAX_LEVEL];
-    unsigned int elementCount[MAX_LEVEL];
+    //Stores courses in an Course poitner datatype array, each index is an array of Courses organized by level 
+    //ex. Course[0] will be an array of 100-level courses 
+    Course * History[MAX_LEVEL];
+    //array corresponding to History[] that stores the number of courses in each index 
+    unsigned int ElementCount[MAX_LEVEL];
 
     public: 
     

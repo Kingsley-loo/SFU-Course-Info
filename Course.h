@@ -44,14 +44,14 @@ class Course {
 
 
     //Description: returns the title of the Course
-
+    string getTitle() const;
 
     //Description: returns the Course Info
     string getInfo() const;
 
 
     //Description:  returns the prerequisites for the Course 
-
+    void getPreReq() const;
 
     //Description: prints out all of the Course's details (Subject, Number, Title, 
     //              Info, preReq) in a tidy manner
